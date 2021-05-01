@@ -9,7 +9,7 @@ const Header = ({ title, onAddTask }) => {
 
     onAddTask(()=>isVisible)
     
-  };
+  };  
 
   const task = {
     id: 4,
