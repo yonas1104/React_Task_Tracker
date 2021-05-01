@@ -44,16 +44,16 @@ const App = () => {
     );
   };
 
- const changeVisible=(visibility)=>{
+ const changeVisible=()=>{
 
-  setVisible(visibility)
+  setVisible(!isVisible)
  }
 
 
   return (
     <div className="container">
-      <Header title="TASK TRACKER" onAddTask={changeVisible} />
-    {isVisible &&   <AddTask onAdd={addTask} />}
+      <Header title="TASK TRACKER" onAddTask={changeVisible} isVisible={isVisible} />
+       {isVisible?   <AddTask onAdd={addTask} /> :''}
       {tasks.length > 0 ? (
         <Tasks
           onDoubleClick={onDoubleClick}
